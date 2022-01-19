@@ -1,0 +1,67 @@
+﻿@model Motorcycle
+
+<main class="mt-5 pt-5">
+    <div class="container">
+        <div>
+            <div class="thumbnail" style="margin-top:30px;">
+                <div class="row">
+                    <div class="col-md-6 center-block">
+                        <img alt="@Model.Mark" src="@Model.Photo" height="630" width="1200" />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Marka : @Model.Mark</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Model : @Model.Model</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Cena : @Model.Price</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Rok Produkcji : @Model.Year</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Pojemność silnika : @Model.EngineSize</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Moc : @Model.Power</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Przebieg : @Model.Mileage</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Kolor : @Model.Colour</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Numer telefonu : @Model.PhoneNumber</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Lokalizacja : @Model.Location</h3>
+                    </div>
+                </div>
+
+
+                <p style="font-size:15px">@Model.Description</p>
+            </div>
+                    <div class="col-md-3" style="padding-right:50px">
+                        <h3 class="pull-right">
+                            <a asp-controller="Home" asp-action="Index" class="btn btn-success">Powrót</a>
+                        </h3>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+</main>

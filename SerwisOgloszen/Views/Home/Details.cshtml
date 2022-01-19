@@ -1,0 +1,15 @@
+﻿@model Motorcycle
+
+<h2>@Model.Mark - @Model.Model</h2>
+
+<div class="thumbnail">
+    <img src="@Model.Photo" alt="@Model.Mark" />
+    <div class="caption-full">
+        <h3 class="pull-right">Cena : @Model.Price</h3>
+        <h4>Rok Produkcji : @Model.Year</h4>
+        <h4>Przebieg : @Model.Mileage</h4>
+        <h4>Pojemność : @Model.EngineSize</h4>
+        <h4>Moc : @Model.Power</h4>
+        <h4>Opis : @Model.Description</h4>
+    </div>
+</div>

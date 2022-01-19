@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Motorcycle>
+
+
+
+<main class="mt-5 pt-5">
+    <div class="container">
+        <table class="table" style="background-color:azure; margin-top:30px;">
+            <thead>
+                <tr>
+                    <th>Mark</th>
+                    <th>Model</th>
+                    <th>Photo</th>
+                    <th>
+                        <a asp-action="Create" class="btn btn-blue-grey btn-sm">Dodaj nowy</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Mark)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Model)</td>
+                        <td><img src="@item.Photo" height="100" width="100" /></td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-light-blue btn-sm" style="margin-bottom:3px">Szczegóły</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Edytuj</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" style="margin-bottom:3px">Usuń</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
